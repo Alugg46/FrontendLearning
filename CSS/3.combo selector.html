@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* descendant selector*/
+        .c1 .c2 .c3{
+            color: #2b669a;
+        }
+
+        /*child selector*/
+        .c1 > .c3{
+            color: pink;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="c1">
+    <div class="c2">
+        <div class="c3"> item 1 contorlled</div>
+    </div>
+</div>
+<div class="c1">
+    <div class="c3">item 2</div>
+</div>
+</body>
+</html>
