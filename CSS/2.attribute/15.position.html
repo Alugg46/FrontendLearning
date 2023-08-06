@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            width:200px;
+            height:60px;
+            background-color:red;
+        }
+        .c2{
+            width:200px;
+            height:60px;
+            background-color:blue;
+            /*相对定位:参照物是自己原本的位置,不脱离文档流*/
+            /*position: relative;*/
+
+            /*绝对定位 参照物：已经定位的最近父级元素直至body标签的位置  完全脱离文档流*/
+            position:absolute;
+            left:200px;
+            top:60px;
+        }
+        /*fixed定位是整个浏览器窗口*/
+        .c3{
+            width:200px;
+            height:60px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="c1"></div>
+<div class="c2"></div>
+<div class="c3"></div>
+</body>
+</html>

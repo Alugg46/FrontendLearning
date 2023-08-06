@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .carousel{
+            width: 800px;
+            height: 1000px;
+            border: 1px solid red;
+            margin: 100px auto;
+            position: relative;
+        }
+        .carousel li{
+            list-style: none;
+        }
+        .carousel .imgs li{
+            z-index:10;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .carousel .btn li{
+            /*层级*/
+            z-index:100;
+            position:absolute;
+            top:0;
+        }
+
+        .carousel .btn .left_btn{
+            left:0;
+            top:50%
+        }
+        .carousel .btn .right_btn{
+            right:0;
+            top:50%
+        }
+        .carousel .btn div{
+            width: 30px;
+            height: 50px;
+            background-color: red;
+            font-size: 15px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            margin-top: -30px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <ul class="imgs">
+        <li><a href=""><img src="imgs/1.jpg" alt=""></a></li>
+        <li><a href=""><img src="imgs/2.jpg" alt=""></a></li>
+        <li><a href=""><img src="imgs/3.jpg" alt=""></a></li>
+        <li><a href=""><img src="imgs/4.jpg" alt=""></a></li>
+    </ul>
+    <ul class="btn">
+        <li class="left_btn"><div><</div></li>
+        <li class="right_btn"><div> ></div></li>
+    </ul>
+</div>
+
+</body>
+</html>
