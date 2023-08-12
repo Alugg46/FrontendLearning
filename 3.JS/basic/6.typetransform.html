@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    // 强转化
+        // parseInt,parseFloat,Number
+        var box1 = "一共100件"; //失败
+        var box2 = "100件"; //成功
+        var ret = parseInt(box1);
+        console.log(box1);
+        console.log(ret);
+
+
+        var box2 = "3.14";
+        console.log(parseFloat(box2));
+
+        var box3 = "3.1.4";
+        console.log(parseFloat(box3))
+        console.log(Number(box3))
+
+        // 转化字符串
+        var x=100;
+        console.log(x.toString(), typeof x.toString())
+
+        // boolean
+        console.log(Boolean(4>5));
+        console.log(Boolean(0));
+        console.log(Boolean("")); //False
+        console.log(Boolean("0"));//False
+        console.log(Boolean([]));//True
+        console.log(Boolean({}));//True
+
+    // 弱转换
+        console.log(1=="1");
+        console.log(1+"200", typeof (1+"200"));
+        console.log(1-"200", typeof (1-"200"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // if
+        //双分支
+        var user ="root";
+        var pwd = "12";
+
+        if(user == "root" && pwd ==="123"){
+            console.log("login success")
+        }else{
+            console.log("login failure")
+        }
+
+        // 多分支
+        var score =86;
+        if( score>90){
+            console.log("Excellent")
+        }else if(score>80){
+            console.log("good")
+        }else if(score>60){
+            console.log("not bad")
+
+        }else{
+            console.log("failure")
+        }
+
+
+        // switch
+
+        var weekend =3
+
+        switch (weekend){
+            case 1: console.log("Monday");break;
+            case 2: console.log("Tuesday");break;
+            case 3: console.log("Wednesday");break;
+            case 4: console.log("Thuresday");break;
+            case 5: console.log("Friday");break;
+            case 6: console.log("Saturday");break;
+            case 0: console.log("Sunday");break;
+            default: console.log("No sense");break;
+
+        }
+
+        // while:
+        conunt = 0;
+        while(count<10){
+            console.log("ok");
+            count++
+        }
+
+        // for: 条件循环 !!!
+        for(var count=0; count<100; count++){
+            if(count===88){
+                // contiune
+                break
+            }
+            console.log(count)
+        }
+
+        var arr = [111, 22, 333];
+        for(var i=0;i<arr.length; i++){
+            console.log(arr[i])
+        }
+
+        let sum =0;
+        for (let i =0; i<=100; i++){
+            sum+=i;
+        }
+        console.log(sum);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+
+        function 函数名（arg1,arg2){
+        语句体（函数体）
+        }
+         */
+
+
+    function foo1(x,y){
+        console.log(x,y)
+
+    }
+
+    foo1(1,2);
+
+    function stu_info(name, gender="male"){
+        console.log("姓名："+ name+"性别："+gender)
+    }
+    stu_info("alugg");
+
+
+    //arguments对象
+     function add(){
+        console.log("arguments:", arguments);
+        var ret = 0;
+        for (var i in arguments){
+            ret +=arguments[i]
+        }
+        console.log(ret)
+     }
+     add(2,4,5,6,7);
+
+
+     // 函数作用域:
+        var name = "yuan"; //声明全局变量，并赋值
+        name = "lugg"; //对已经存在的变量name 重新赋值
+        console.log(name)
+
+        var gender ="male";
+        var gender = "female"; //原内存释放与新内存开辟
+        console.log(gender);
+
+        var num =10;
+        function func(){
+            var num=20; //函数内部使用Var嚯let声明变量为局部变量则直接使用内部的局部变量num
+            //如果没有内部没声明num,则直接用外部的全局变量
+            num= 20;//则会修改全局变量
+        }
+
+
+        // 匿名函数：
+        //调用1 匿名函数赋值变量
+        var xixihah = function(){
+            console.log("匿名函数...")
+        }
+        xixihah();
+
+        //调用2 匿名函数自执行
+        (function(x,y){
+            console.log(x+y)
+        })(2,7);
+
+
+        function bar(){
+
+            return function(){
+                console.log("inner函数！")
+            }
+        }
+        bar()();
+
+
+        //预编译：
+        /*
+        1.js加载之后，先检查语法错误
+        2.语法检测完，进行全局预编译
+        3.全局预编译结束后，解释一行，执行一行
+        4.执行到函数调用那一行的前一刻，会先进行函数预编译，再往下执行。
+         */
+
+        /*全局预编译
+        1.创建全局对象GO
+        2.找变量声明，将变量声明作为GO属性名，值为Undefined
+        3.找函数声明，作为GO属性，赋予函数体
+         */
+
+        /* 局部预编译
+        1.创建AO对象，执行上下文
+        2.找到形参和变量声明作为AO属性名，值为Undefined
+        3.将实参值和形参统一
+        4.在函数体找函数声明，值赋予函数体
+         */
+        console.log(a);
+        var a =10;
+        console.log(a);
+        function foo(a){
+            console.log(a);
+            var a =100;
+            console.log(a);
+            function a(){}
+            console.log(a);
+            var b  = function(){};
+            console.log(b);
+            function d(){}
+        }
+        var c = function(){
+            console.log("匿名函数c")
+        };
+        console.log(c);
+        foo(20);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

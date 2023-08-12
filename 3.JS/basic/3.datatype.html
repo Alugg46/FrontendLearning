@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.number
+        var x = 10;
+        var y = 20;
+        console.log(x, typeof x);
+        console.log(y, typeof y);
+
+        //2.str
+        var s1="hello world";
+        var s1 = new String("hello world");
+
+        //2.1 basic method
+        console.log( s1.length )
+        console.log( s1.toUpperCase());
+
+        //索引
+        console.log(s1.indexOf("h"));
+        console.log(s1[2]);
+
+        //切片
+        console.log(s1.slice(0,3));
+
+        //分割
+        var ret = s1.split(" ");
+        console.log(ret);
+
+        //截取
+        console.log(s1.substr(2,2));
+
+        // 移除字符串首尾空白
+        var passwd=" alug gg "
+        console.log(passwd.trim())
+    </script>
+</head>
+<body>
+
+</body>
+</html>

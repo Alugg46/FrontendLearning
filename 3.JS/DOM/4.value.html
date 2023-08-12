@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" class="c1" value="hello world">
+<button class="btn">change</button><br>
+
+
+
+<select name="" id="i1">
+    <option value ="lyon">lyon</option>
+    <option value ="paris">paris</option>
+    <option value ="lille">lille</option>
+</select>
+<button class="btn2">soumettre</button><br>
+
+<p><textarea name="" id="i2" cols="30" rows="10">yuanyuan</textarea></p>
+<script>
+    //<input>
+    var ele1 = document.querySelector(".c1");
+    var ele2 = document.getElementsByClassName("btn")[0];
+    ele2.onclick = function (){
+        // ele1.value = "hello js"
+        this.previousElementSibling.value = "hello js";//导航查找
+    }
+
+    //<select>
+    var sel = document.querySelector("#i1");
+    var btn2 = document.getElementsByClassName("btn2")[0];
+    console.log(btn2)
+    btn2.onclick = function () {
+        sel.value = "paris";
+    }
+
+    //<textarea>
+    var ele3 = document.querySelector("#i2");
+    console.log(ele3.value)
+    ele3.value = "welcome to JS world"
+</script>
+</body>
+</html>

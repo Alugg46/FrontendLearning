@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr01 = [12, "hello", true];
+        console.log(arr01, typeof arr01) ;//"object"
+
+        var arr02 = new Array(12, "hello", true);
+        console.log(arr01, typeof arr02)
+
+        console.log(arr01.length)
+
+        //1.插入和删除
+        //push() 入栈
+        var arr = [1,2,3,4,5];
+        arr.push("a");
+        arr.push([111,222]);
+        console.log(arr);
+
+
+        //pop()出栈
+        ret = arr.pop();
+        console.log(arr);
+
+        //unshift() 队首插入
+        arr.unshift(100);
+        console.log(arr);
+        //shift() 出队
+        arr.shift();
+        console.log(arr);
+
+        //2反转和排序
+        var arr02 = [1,4,5,2,3];
+        arr02.reverse();
+        console.log(arr02);
+
+        var arr03 = [1,4,10,2,3,100];
+        // arr03.sort(); //按ASCII码排序
+        // console.log(arr03);
+
+        function sort_num(a,b){
+            return a-b;
+        }
+
+        arr03.sort(sort_num);
+        console.log(arr03);
+
+
+        //splice
+        // 删除多个
+        arr = [1,2,3,4,5];
+        arr.splice(2, 2); //从2开始 删除两个
+        console.log(arr);
+
+        // 添加多个
+        arr = [1,2,3,4,5];
+        arr.splice(2,0,100,101,102);
+        console.log(arr);
+
+        // 替换多个
+        arr = [1,2,3,4,5];
+        arr.splice(2,2,33,44);
+        console.log(arr);
+
+        //concat 拼接
+        var arr1 = [1,2,3];
+        var arr2 = [4,5,6];
+        var ret = arr1.concat(arr2);
+        console.log(ret);
+
+        //join字符串拼接
+        var s = "zhansan lisi wangwu";
+        var ret = s.split(" ");
+        console.log(ret);
+
+        var s2 = ret.join("-");
+        console.log(s2);
+
+
+        console.log(arr1.includes(2)); //是否包含2
+        console.log(arr1.indexOf(3)); //3的索引
+        console.log(Array.isArray(arr1));//是否为数组
+
+
+        //slice切片
+        arr3 = [111,222,333,444,555];
+        console.log(arr1.slice(1,3));
+        console.log(arr3.slice(1,-1));
+        console.log(arr3.slice(1));
+
+        // 数组循环
+        for (var i=0; i<arr3.length; i++){
+            console.log(i,arr3[i])
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

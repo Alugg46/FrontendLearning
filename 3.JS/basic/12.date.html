@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //初始化Date
+    var nowd1 = new Date();
+    console.log(nowd1,typeof nowd1);
+    console.log(nowd1.toString());
+    console.log(nowd1.toLocaleString())
+
+    //参数指定
+    var d2 = new Date("2004/3/20 11:12");
+    console.log(d2);
+    console.log(d2.getUTCFullYear());
+
+    //时间戳
+    var date3 = new Date(5000); //从1970年开始计算加5000毫秒
+    console.log(date3.toLocaleString());
+
+    //获取时间片信息
+    var today = new Date()
+    console.log(today.getFullYear());
+    console.log(today.getMonth());
+    console.log(today.getDate());
+
+    console.log(today.toLocaleString());
+
+</script>
+</body>
+</html>

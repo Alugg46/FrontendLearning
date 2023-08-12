@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="i1">DIV</div>
+<div class="c1">DIV</div>
+<div class="c1">DIV</div>
+<div class="c1">DIV</div>
+<div class="outer">
+    <div class="c1">item</div>
+</div>
+
+<div class="c2">
+    <div class="c3">
+        <ul class="c4">
+            <li class="c5" id="i2">111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+</div>
+<div>DIV</div>
+
+<script>
+    //直接查找
+    var ele = document.getElementById("i1"); //ele dom object
+    console.log(ele);
+
+    var eles = document.getElementsByClassName("c1"); //eles is arrayList
+    console.log(eles);
+
+    var eles2 = document.getElementsByTagName("div"); //eles is arrayList
+    console.log(eles2);
+
+    var outer = document.getElementsByClassName("outer")[0];
+    var te = outer.getElementsByClassName("c1");
+    console.log(te);
+
+    //导航查找
+    var c5 = document.getElementsByClassName("c5")[0];
+    console.log(c5)  // c5 is DOM
+
+    console.log(c5.parentElement);              //父节点标签
+    console.log(c5.children);                   //所有子节点标签
+    console.log(c5.firstElementChild);          //第一个子标签
+    console.log(c5.lastElementChild);          //最后一个子标签
+    console.log(c5.nextElementSibling);        //下一个兄弟标签
+    console.log(c5.previousElementSibling);    //上一个兄弟标签
+
+    //CSS选择器查找
+    var c5_dom = document.querySelector(".c2 .c3 .c5")
+    console.log(c5_dom)
+    var doms = document.querySelectorAll("ul li")
+    console.log(doms)
+</script>
+</body>
+</html>

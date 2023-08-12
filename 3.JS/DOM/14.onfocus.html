@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" class="c1">
+
+<script>
+
+  var ele = document.querySelector(".c1");
+  //使用情景效验账户密码的合法性时
+  //获取焦点
+  ele.onfocus = function () {
+    console.log("ok");
+  }
+  //失去焦点
+  ele.onblur= function () {
+    console.log("out");
+  }
+</script>
+
+</body>
+</html>

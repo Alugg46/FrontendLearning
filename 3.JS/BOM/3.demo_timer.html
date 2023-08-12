@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function show_time(){
+            var now = new Date();
+            var now_str = now.toLocaleString();
+            var ele = document.getElementById("i1");
+            ele.value = now_str;
+        }
+        var ID;
+        function start(){
+            if (ID === undefined){
+            show_time();
+            ID= setInterval(show_time, 1000);
+            }
+
+        }
+
+        function end(){
+            clearInterval(ID);
+            ID = undefined;
+        }
+    </script>
+</head>
+
+
+<body>
+
+<input type="text" value="" id="i1"><button onclick="start();">start</button><button onclick="end()">stop</button>
+</body>
+</html>

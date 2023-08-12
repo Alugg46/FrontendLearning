@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" id="i1">
+    <input type="text" name="user" class="c1">
+    <input type="submit">
+
+</form>
+
+
+<script>
+    var form = document.querySelector("#i1")
+    var user = document.querySelector(".c1")
+    form.onsubmit =  function (e) {
+        alert(123)
+        if (user.value.length<5){
+            alert("user name should be longer");
+            user.value = "";
+            //阻止提交
+            //方式1
+            return false;
+            //方式2
+            e.preventDefault();
+        }
+    }
+
+</script>
+</body>
+</html>

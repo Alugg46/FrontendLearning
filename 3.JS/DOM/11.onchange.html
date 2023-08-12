@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<select name="" id="country">
+    <option >country</option>
+    <option value="france">France</option>
+    <option value="china">China</option>
+    <option value="america">America</option>
+</select>
+
+<select name="" id="city">
+    <option value>city</option>
+
+</select>
+
+
+<script>
+    var data = {"france":["paris", "lyon","lille"],"china":["Pekin","Wuhan","Shanghai"],"america":["newyork","washinton","california"]}
+    var country = document.querySelector("#country")
+    var city = document.querySelector("#city")
+    country.onchange = function() {
+        var cities = data[this.value];
+
+        city.options.length = 1; //每次更好country会清空之前city中的所有option;
+
+        for (var index in cities){
+            var option = document.createElement("option");  //根据国家 添加各个城市
+            option.innerHTML = cities[index];
+            city.appendChild(option);
+        }
+    }
+</script>
+
+</body>
+</html>

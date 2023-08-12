@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+      //两种方式定时
+      //1 匿名函数
+    var ID = setInterval(function(){
+        console.log("ok")
+    },1000);//毫秒为单位
+
+      //2.自定义函数
+    function foo(){
+        console.log("foo")
+    }
+    var ID = setInterval(foo, 1000);
+
+    console.log(ID);
+    clearInterval(ID);
+
+    // 单次定时器
+    var ID2 = window.setTimeout(foo,1000);
+    clearTimeout(ID2)
+  </script>
+</head>
+<body>
+
+</body>
+</html>

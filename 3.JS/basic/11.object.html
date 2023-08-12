@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //方式1 创建Object
+    var person = new Object();
+    person.name = "alvin";
+    person.age = 18;
+    console.log(person.name);
+
+    //方式2 创建Object
+    var person2 = {
+        name:"alvin",
+        age:18,
+        sex:"male"
+    };
+    console.log(person2.age, typeof person2);
+
+    //访问方式
+    console.log(person2.age);
+    console.log(person["name"]);
+
+    //循环遍历
+    arr = [123,34123];
+    for (var i in arr){
+        console.log(i,arr[i]);
+    }
+
+    for (var attr in person2){
+        console.log(attr, person2[attr])
+    }
+
+
+
+
+    // 序列化和反序列化
+
+    //反序列化（接收到后端的数据，转化成前端可以读懂的）：把一个Json字符串解析成JS能识别的数据类型
+    var s = '{"name":"alvin", "age":18}';
+    var data = JSON.parse(s);
+    console.log(data, typeof data);
+
+    //序列化（前端的数据要传到后端）：把JS数据类型转化为json
+    var res = {
+        state:true,
+        data:[123,456,789]
+    }
+    var res_josn_str = JSON.stringify(res);
+    console.log(res_josn_str, typeof res_josn_str)
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

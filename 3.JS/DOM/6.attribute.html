@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            background-color: blue;
+        }
+        .c2{
+            color:white;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="c1" id="i1" k1="v1" value="xxxx"> hello world</div>
+
+<script>
+    var ele = document.querySelector(".c1");
+    console.log(ele.value); //自定义的value 是无法识别的。
+
+    //获取
+    console.log(ele.getAttribute("k1"));
+    console.log(ele.getAttribute("value"));
+
+    //设置
+    ele.setAttribute("k2","v2");
+
+    //删除
+    ele.removeAttribute("k1");
+
+
+
+    //class attribute：
+    //情景：假设c1需要额外加上c2样式
+    var ele = document.querySelector(".c1")
+    ele.onclick = function() {
+        this.classList.add("c2")
+    }
+    // ele.classList.remove("c2")
+</script>
+</body>
+</html>

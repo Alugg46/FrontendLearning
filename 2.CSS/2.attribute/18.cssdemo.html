@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xiaomi</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .site-topbar{
+            background-color: #333;
+            height:40px;
+            font-size:12px;
+            color:#b0b0b0;
+        }
+
+        .container{
+            width:1226px;
+            margin: 0 auto;
+            height: 40px;
+        }
+
+        .topbar-nav{
+            float:left;
+            height:40px;
+            line-height:40px;
+        }
+        .topbar-nav a {
+            color:#b0b0b0;
+            display: inline-block;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        .topbar-nav span {
+            color: #424242;
+        }
+
+        .topbar-cart{
+            float:right;
+            width:120px;
+            height: 40px;
+            line-height:40px;
+            color:#b0b0b0;
+            background-color: #424242;
+        }
+
+        .topbar-cart a{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #b0b0b0;
+            background-color: #424242;
+            text-decoration: none;
+        }
+
+        .topbar-info {
+            float: right;
+            height:40px;
+            line-height: 40px;
+        }
+
+        .topbar-info a{
+            float: left;
+            text-decoration: none;
+            padding:0 5px;
+            color: #b0b0b0;
+            line-height: 40px;
+        }
+        .topbar-info span{
+            color: #424242;
+            float: left;
+        }
+        /*.site-header{*/
+        /*    !*background-color:#616161;*!*/
+        /*}*/
+        .site-header .container{
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .header-logo {
+            width: 234px;
+            float:left;
+        }
+        .header-logo .logo{
+            display: inline-block;
+            width:58px;
+            height:56px;
+            background: url("https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/326368243_840149190616728_846760603268534827_n.png?_nc_cat=108&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=eWKxQXMg-7QAX9aAEuE&_nc_ht=scontent-cdg4-1.xx&oh=00_AfCYcK8fmuY_ZS5uy-9g9J7Xr5_MiFQBcEVUPI_PGPazpQ&oe=64D62716");
+            background-size: 56px;
+            margin-top: 25px;
+        }
+
+        .header-nav{
+            width:850px;
+            float:left;
+        }
+
+        .nav-list{
+            list-style:none;
+            float:left;
+            height: 88px;
+            padding:12px 0 0 30px;
+            font-size: 16px;
+        }
+        .nav-list .nav-item{
+            float:left;
+        }
+        .nav-list .nav-item a{
+            display: block;
+            padding: 26px 10px 38px;
+            text-decoration: black;
+            color: #333;
+        }
+        .header-search{
+            float:right;
+            width:296px;
+            margin-top: 25px;
+        }
+
+        .header-search .search-form{
+            display: block;
+            width: 296px;
+            height:50px;
+            position:relative;
+        }
+
+        .header-search input{
+            position: absolute;
+            top:0;
+            border:1px solid #e0e0e0;
+        }
+
+        .header-search .search-form .search-text{
+            left: 0;
+            width:223px;
+            height:50px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 50px;
+        }
+
+        .header-search .search-form .search-btn{
+            right:0;
+            width:52px;height:52px;
+            line-height:24px;
+            background: #fff;
+            color:#616161;
+        }
+
+        .clearfix:after{
+            display: block;
+            content:"";
+            clear:both
+        }
+        .home .container{
+            background: red;
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .home .container .cate{
+            float: left;
+            width:20%;
+            background-color: orange;
+            height:460px;
+        }
+        .home .container .carousel{
+            float:left;
+            width: 80%;
+            background-color: blue;
+            height:460px;
+        }
+
+        .home-sub .span4{
+            float: left;
+            width:20%;
+            background-color: gray;
+            height:170px
+        }
+
+        .home_promolist{
+            list-style: none;
+        }
+
+         .home_promolist li{
+            float: left;
+            background-color: pink;
+             width:316px;
+            height: 170px;
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+<div class="head clearfix">
+    <div class="site-topbar">
+        <div class="container">
+            <div class="topbar-nav">
+                <a href="">Portable</a>
+                <span>|</span>
+                <a href="">PC</a>
+                <span>|</span>
+                <a href="">Electromenage</a>
+                <span>|</span>
+                <a href="">Media</a>
+                <span>|</span>
+                <a href="">Cloud</a>
+                <span>|</span>
+            </div>
+            <div class="topbar-cart">
+                <a href="">CART</a>
+            </div>
+            <div class="topbar-info">
+                <a href="">Login</a>
+                <span>|</span>
+                <a href="">Inscription</a>
+                <span>|</span>
+                <a href="">Infos</a>
+            </div>
+        </div>
+    </div>
+    <div class="site-header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="" class="logo"></a>
+            </div>
+            <div class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href=""><span>apple</span></a></li>
+                    <li class="nav-item"><a href=""><span>oppo</span></a></li>
+                    <li class="nav-item"><a href=""><span>samsung</span></a></li>
+                    <li class="nav-item"><a href=""><span>Huawei</span></a></li>
+                </ul>
+
+                <div class="header-search">
+                    <form action="" class="search-form">
+                        <input type="text" class="search-text" placeholder="Alugg">
+                        <input type="submit" value="?" class="search-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home">
+    <div class="container">
+        <div class="home-hero">
+            <div class="cate"></div>
+            <div class="carousel"></div>
+        </div>
+        <div class="home-sub">
+            <div class="span4"></div>
+            <ul class="home_promolist">
+                <li><a href=""><img></a></li>
+                <li><a href=""><img></a></li>
+                <li><a href=""><img></a></li>
+           </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

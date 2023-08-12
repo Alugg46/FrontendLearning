@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<!--静态绑定事件-->
+<!-- this代替这个div的dom-->
+<div onclick="foo(this)" >click</div>
+<p id="i1">PPP</p>
+<ul class="ls">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+</ul>
+<script>
+    function foo(a){
+        // var p =document.querySelector("#i1");
+        // console.log(p.innerHTML);
+        console.log(a);
+        console.log(a.innerHTML);
+    }
+
+    //动态绑定
+    /*
+    dom对象.on事件=function(){
+    //事件触发代码
+    事件函数中的this：代指的是触发事件的标签
+    }
+    */
+
+        var ele = document.getElementById("i1");
+        ele.onclick = function (){
+            alert(123);
+            console.log(this);
+        }
+
+
+    //循环绑定事件
+    var eles = document.querySelectorAll(".ls li");
+    console.log(eles);
+    for (var i =0; i<eles.length;i++){
+        console.log(eles[i]);
+        eles[i].onclick = function(){
+            // console.log(eles[i].innerHTML)
+            console.log(this.innerHTML);
+        }
+    }
+    console.log("i",i);
+</script>
+</body>
+</html>

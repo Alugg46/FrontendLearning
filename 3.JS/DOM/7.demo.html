@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .tab{
+            width: 800px;
+            height:300px;
+            margin: 200px auto;
+        }
+        .tab ul{
+            list-style:none;
+        }
+        .tab .tab-title{
+            background-color: #f7f7f7;
+            border: 1px solid #eee;
+            border-bottom: 1px solid #e4393c;
+        }
+
+        .tab .tab-title li{
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+
+        .tab-title li.current{
+            background-color: #e4393c;
+            color: #fff;
+            cursor: default;
+        }
+
+        .hide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="tab">
+    <ul class="tab-title">
+        <li class="current" index="0">Introduction</li>
+        <li class="" index="1">details</li>
+        <li class="" index="2">sell</li>
+        <li class="" index="3">reviews</li>
+    </ul>
+
+    <ul class="tab-content">
+        <li class="">Introduction.....</li>
+        <li class="hide">details.....</li>
+        <li class="hide">sell.....</li>
+        <li class="hide">reviews.....</li>
+    </ul>
+</div>
+
+<script>
+    var titles = document.querySelectorAll(".tab-title li")
+    var contents = document.querySelectorAll(".tab-content li")
+    for (var i =0;i<titles.length; i++){
+        titles[i].onclick = function(){
+            //(1)触发标签拥有current样式
+            for (var j = 0; j<titles.length; j++){
+                titles[j].classList.remove("current")
+            }
+            this.classList.add("current");
+
+            //显示对应内容
+            index = this.getAttribute("index");
+            for (var k = 0; k<contents.length;k++){
+                contents[k].classList.add("hide");
+            }
+            contents[index].classList.remove("hide");
+        }
+    }
+</script>
+
+</body>
+</html>
