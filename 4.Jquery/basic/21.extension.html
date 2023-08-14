@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+
+</head>
+<body>
+
+<div class="c1">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+</div>
+    <script>
+        //扩展JQ本身，给jq上增加新函数
+        jQuery.extend({
+            min:function (a,b){
+                return a<b ?a:b
+            },
+            max:function (a,b){
+                return a>b ?a:b
+            }
+        });
+
+        console.log($.min(3,5));
+
+
+        //扩展jq元素集来提供新方法
+        jQuery.fn.extend({
+            xixi:function(){
+                console.log($(this));
+                $(this).prop("checked", true);
+            }
+
+        })
+        $(".c1 :checkbox").xixi();
+    </script>
+
+</body>
+</html>

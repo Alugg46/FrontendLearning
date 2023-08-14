@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+
+<button class="select_all">全选</button>
+<button class="cancel">取消</button>
+<button class="reverse">反选</button>
+<table>
+    <tr>
+        <td>选择</td>
+        <td>姓名</td>
+        <td>年龄</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Alugg</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>yuanyuan</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>zhangsan</td>
+        <td>20</td>
+    </tr>
+</table>
+
+<script>
+    $(".select_all").click(function(){
+        $("table input:checkbox").prop("checked", true);
+    })
+    $(".cancel").click(function(){
+        $("table input:checkbox").prop("checked", false);
+    })
+    $(".reverse").click(function(){
+        //方法1：for循环一个个dom来做
+        // var $eles = $("table input:checkbox")
+        // for (var i = 0; i<$eles.length;i++){
+        //     var state = $($eles[i]).prop("checked");
+        //     if(state){
+        //         $($eles[i]).prop("checked",false);
+        //     }else{
+        //         $($eles[i]).prop("checked",true);
+        //     }      })
+
+        //方法2：利用each
+        $("table input:checkbox").each(function(){
+            $(this).prop("checked",!$(this).prop("checked"))
+        })
+    })
+</script>
+
+
+</body>
+</html>

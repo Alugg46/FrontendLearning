@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+
+    <style>
+        .c2{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        //1.加载后执行函数；类似于JS中的reload.
+        // $(document).ready(function(){
+        // $(".c1,ul li").on("click",function(){
+        //  console.log($(this).html)});
+        // });
+        //简写：
+        $(function(){
+            $(".c1,ul li").on("click", function () {
+                console.log($(this).html())
+            });
+        });
+
+        //2.类似于js的mouseon mouseover
+        $(function(){
+            $(".c1,ul li").on("click", function () {
+                console.log($(this).html())
+            });
+
+            $(".c2").hover(mouserover, mouserout);
+            function mouserover(){
+                console.log("over");
+            }
+            function mouserout(){
+                console.log("out");
+            }
+        });
+    </script>
+</head>
+<body>
+
+
+<div class="c1">12314</div>
+
+<ul>
+    <li>123123</li>
+    <li>32131</li>
+    <li>4514212</li>
+</ul>
+
+
+<script>
+
+    //绑定方式一：
+    // jq对象.click(functnion){事件函数}
+    $(".c1").click(function() {
+        // console.log(this.innerHTML);
+        //等价于
+        console.log($(this).html());
+    })
+
+    $("ul li").click(function (){
+        // console.log(this.innerHTML);
+        console.log($(this).html());
+    })
+
+
+    //绑定方式二：bind版本
+    $(".c1,ul li").bind("click",function(){
+        console.log($(this).html)
+    })
+
+    //绑定方式三：on版本
+    $(".c1,ul li").on("click",function(){
+    console.log($(this).html)
+    })
+
+    //取消绑定事件
+    $(".c1,ul li").off("click")
+</script>
+</body>
+</html>

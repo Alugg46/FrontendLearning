@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <style>
+    .c1{
+        color:red;
+    }
+    .c2{
+        background-color: blue;
+    }
+    .c3{
+        font-style:italic;
+    }
+    </style>
+</head>
+<body>
+<div class="c1">hello cs</div>
+
+<script>
+    $(".c1").click(function() {
+        $(this).addClass("c2").removeClass("c3");
+
+    $(".c1").mouseover(function(){
+        $(this).addClass("c3");
+        })
+    })
+</script>
+</body>
+</html>

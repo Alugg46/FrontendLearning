@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(function () {
+        $("#i1").blur(function(){
+
+            //获取jq对象的value值
+            console.log($(this).val());
+
+            //设置value
+            $(this).val("hello world")
+        });
+
+        $("#i3").change(function (){
+            console.log($(this).val());
+        })
+    })
+
+
+    </script>
+
+</head>
+<body>
+<input type="text" id="i1">
+<button class="btn">change</button><br>
+
+<select name="" id="i3">
+    <option value ="lyon">lyon</option>
+    <option value ="paris">paris</option>
+    <option value ="lille">lille</option>
+</select>
+<button class="btn2">soumettre</button><br>
+
+<p><textarea name="" id="i2" cols="30" rows="10">yuanyuan</textarea></p>
+
+
+
+
+</body>
+</html>

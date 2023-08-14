@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+            <div class="panel-heading">Panel with panel-primary class</div>
+            <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-success">
+            <div class="panel-heading">Panel with panel-success class</div>
+            <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-info">
+            <div class="panel-heading">Panel with panel-info class</div>
+            <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <button class="btn btn-primary add_btn" data-toggle="modal" data-target="#myModal">添加员工</button>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>部门</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr>
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>23</td>
+                        <td>销售部</td>
+                        <td>
+                            <button class="btn btn-sm btn-danger delete-btn">删除</button>
+                            <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>aluigg</td>
+                        <td>25</td>
+                        <td>销售部</td>
+                        <td>
+                            <button class="btn btn-sm btn-danger delete-btn">删除</button>
+                            <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                    <div class="form-group">
+                                        <label for="name">姓名</label>
+                                        <input type="text" class="form-control" id="name"
+                                               placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age">年龄</label>
+                                        <input type="text" class="form-control" id="age"
+                                               placeholder="Age">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dep">部门</label>
+                                        <select name="" class="form-control" id="dep">
+                                            <option value="销售部">销售部</option>
+                                            <option value="运营部">运营部</option>
+                                            <option value="财务部">财务部</option>
+                                        </select>
+                                    </div>
+                             </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary keep_btn">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".container .add_btn").click(function () {
+        $("#myModal").modal("show");
+    })
+
+    $(".keep_btn").click(function (){
+        //隐藏模态对话框
+        $("#myModal").modal("hide");
+        //添加节点
+        var name = $("#name").val();
+        var age = $("#age").val();
+        var dep = $("#dep").val();
+        var number = $('.tbody').children().length+1;
+        var tr = `
+            <tr>
+                <td>${number}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${dep}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger delete-btn">删除</button>
+                    <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                </td>
+            </tr>
+        `;
+        $(".tbody").append(tr);
+    });
+
+    $(".tbody").on("click",".delete-btn", function(){
+        $(this).parent().parent().remove();
+        //调整序号
+        $(".tbody tr td:first-child").each(function (i){
+            $(this).html(i+1);
+        })
+    });
+
+    //编辑事件
+    $(".tbody").on("click",".edit-btn", function(){
+        $(this).html("保存").attr("class","btn btn-sm btn-success keep-btn");
+
+        $(this).parent().siblings().each(function (){
+            if($(this).index()!==0){
+                var v = $(this).html();
+                var inp = `<input type="text" value="${v}">`;
+                $(this).html("");
+                $(this).append(inp);
+            };
+        })
+    });
+    $(".tbody").on("click",".keep_btn",function () {
+       // 调整标签的样式
+        $(this).html("编辑").attr("class","btn btn-sm btn-warning edit_btn");
+        $(this).parent().siblings().each(function () {
+               if($(this).index()!== 0){
+                  var v = $(this).children().first().val();
+                  $(this).html(v);
+               }
+        })
+    });
+
+</script>
+
+
+</body>
+</html>

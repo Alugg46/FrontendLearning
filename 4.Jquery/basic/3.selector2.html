@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<ul class="c1">
+    <li>111</li>
+    <li class="c2">222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+    <li>666</li>
+</ul>
+
+<script>
+    $(".c1 li:first").css("color","red");
+    $(".c1 li:last").css("color","green");
+    $(".c1 li:eq(2)").css("color","green"); //索引为2
+    $(".c1 li:gt(3)").css("color","yellow");  //大于索引3
+    $(".c1 li:lt(3)").css("color","blue");  //小于索引3
+    $(".c1 li:even").css("color","blue");  //偶数变
+    $(".c1 li:odd").css("color","blue");  //奇数变
+
+    //传参
+    var index = 2;
+    $(".c1 li").eq(index);
+    $(".c1 li").first();
+</script>
+</body>
+</html>

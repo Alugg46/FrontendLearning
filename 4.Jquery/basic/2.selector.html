@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<div class="c1" id="i1">1231231</div>
+
+<p>P</p>
+
+<div class="c1">
+    <div class="c2">
+        <ul>
+            <li>1123</li>
+            <li>5121</li>
+            <li>12412</li>
+        </ul>
+    </div>
+    <ul>
+        <li>uitasd</li>
+        <li>uitasd</li>
+        <li>uitasd</li>
+    </ul>
+</div>
+
+<div class="links">
+    <a href="1.png">click1</a>
+    <a href="2.png">click2</a>
+    <a href="3.png">click3</a>
+    <a href="4.png">click4</a>
+    <a>cilick</a>
+    <button></button>
+</div>
+
+<input type="text">
+<input type="password">
+<script>
+    //CSS选择器
+    //标签子代
+
+    // $(".c1").css("color", "red");
+    // $("#i1").css("color", "red");
+    // $("div,p").css("color", "red");
+    // $(".c1 .c2 li").css("color","red");
+    // $(".c1 ul").css("color", "red");
+    // $(".c1> ul").css("color", "red");
+
+    //属性选择
+    // $(".links [href]").css("color","red");
+    $(".links [href$='png']").css("color","red");
+
+    //表单选择  :
+    $("[type='text']").css("border", "1px solid red");
+    $(":text").css("border", "1px solid red");
+    $(":password").css("border", "1px solid red");
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<ul>
+    <li>12</li>
+    <li>23</li>
+    <li>12312</li>
+    <li>123</li>
+</ul>
+
+
+<script>
+    //类方法each遍历循环
+    var arr = [111, 222, 333];
+    $.each(arr, function(i,j) {
+        console.log(i,j);
+    });
+    var obj = {name:"alvin", age:19}
+    $.each(obj, function(k,v){
+        console.log(k,v);
+    });
+    //实例方法each
+    $("ul li").each(function(){
+        // console.log("ok");
+        //循环函数中的this：代指的是每次循环的dom对象
+        console.log(this);
+        var v = $(this).html();
+        if (parseInt(v)>30){
+            $(this).css("color","red");
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+<div class="c1">
+    <div class="c2">
+        <div class="c3">
+            <p>p1</p>
+        </div>
+    </div>
+    <p>p2</p>
+</div>
+
+
+<ul>
+    <li>111</li>
+    <li class="c5">2222</li>
+    <li>333</li>
+    <li id="i1">4444</li>
+    <li>555</li>
+</ul>
+
+
+<div class="c5">12312</div>
+<div>7777</div>
+
+
+<script>
+    //查询儿子
+    // console.log($(".c1").children());
+    // console.log($(".c1").children("p"));
+    //
+    // //查询后代
+    // console.log($(".c1").find(".c3"));
+    //
+    // //查询兄弟
+    // $(".c5").next().css("color","red");
+    // $(".c5").nextAll().css("color","red");
+    // $(".c5").nextUntil("#i1").css("color","red");
+    //
+    // //向上找兄弟
+    // $(".c5").prev().css("color","red");
+    // $(".c5").prevAll().css("color","red");
+    // $(".c5").prevUntil("#i1").css("color","red");
+
+    // $(".c5").siblings().css("color","red");
+
+    //查找父标签
+    console.log($(".c3").parent());
+    console.log($(".c3").parent().parent());
+    console.log($(".c3").parents());//所有父亲，
+    console.log($(".c3").parentsUntil("body")); //向上取到父亲
+
+</script>
+
+</body>
+</html>

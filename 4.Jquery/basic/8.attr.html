@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function (){
+            //获取属性
+            console.log(("#i1").attr("name")); //只获取第一个
+
+            //设置属性
+            $("#i1").attr("name", "yuan"); //针对于所有JQ对象，全部设置
+            $("#i1").attr("k1", "v1");
+            $("#i1").attr({name:"yuan","k1":"v1"});
+
+            //================= prop =================一些特殊的表单属性
+            console.log($(":checkbox").attr("checked")) // undefined
+            console.log($(":checkbox").prop("checked"))  //True or False
+        })
+    </script>
+
+</head>
+<body>
+
+<div class="c1" id="i1" name="alvin">DIV</div>
+
+<input type="checkbox" >
+</body>
+</html>

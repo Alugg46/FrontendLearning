@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      *{
+        marigin: 0;
+        padding: 0;
+      }
+      .outer .img img{
+        height:470px;
+        width:590px;
+      }
+
+      .outer{
+        width:590px;
+        height:470px;
+        margin:100px auto;
+        position:relative;
+        border:1px solid red;
+      }
+      .outer ul{
+        list-style: none;
+      }
+
+      .outer .img li{
+        position: absolute;
+        top:0;
+        left:0;
+      }
+
+      .outer .hide{
+        display: none;
+      }
+
+      .outer .num{
+          position: absolute;
+          z-index:100;
+          bottom: 16px;
+          left:16px;
+      }
+      .outer .num li{
+          display: inline-block;
+          width: 16px;
+          height:16px;
+          background-color: lightgrey;
+          text-align: center;
+          line-height: 16px;
+          border-radius: 50%;
+          margin-left: 5px;
+      }
+
+      .num li.current{
+          background-color:red;
+      }
+
+      .btn li{
+          position: absolute;
+          top:50%;
+          width:40px;
+          height:60px;
+          background-color: gray;
+          text-align: center;
+          line-height: 60px;
+          color: white;
+          margin-top: -30px;
+
+      }
+      .btn .left_btn{
+          left:0;
+      }
+
+      .btn .right_btn{
+          right:0;
+      }
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="img">
+        <li><a><img src="//m.360buyimg.com/babel/s1125x600_jfs/t1/156011/19/36990/85599/646c850aF5e22eaa0/87641bfb5cf707ba.jpg!q70.dpg"></a></li>
+        <li class="hide"><a><img src="//m.360buyimg.com/babel/s710x370_jfs/t1/197659/30/31344/62825/640fd751F694963ed/a6e1ac2e5c27f160.jpg!q70.dpg"></a></li>
+        <li class="hide"><a><img src="//m.360buyimg.com/babel/s1420x740_jfs/t1/194401/20/32669/76553/64142a96F7733e6ad/cf2727848c86cf45.jpg!q70.dpg"></a></li>
+        <li class="hide"><a><img src="//m.360buyimg.com/babel/jfs/t1/220906/22/28594/263996/64d8f9e0F66cedfc3/47206c51b9595874.png"></a></li>
+            <li class="hide"><a><img src="//img30.360buyimg.com/pop/s590x470_jfs/t1/220191/40/34624/42851/64d1d84bF6f454143/45e4edb99e3cfe35.jpg.avif"></a></li>
+    </ul>
+
+    <ul class="num">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="btn">
+        <li class="left_btn"> < </li>
+        <li class="right_btn"> > </li>
+    </ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    var i =0;
+
+    $(".outer .btn .right_btn").click(go_right);
+
+    function go_right() {
+
+        if(i===4){
+            i=-1;
+        }
+        i++;
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current");
+
+    }
+    $(".outer .btn .left_btn").click(go_left);
+        function go_left() {
+        if(i===0){
+            i=5;
+        }
+        i--;
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current");
+    }
+
+    var ID = setInterval(go_right, 1000)
+    $(".outer").hover(function () {
+        //鼠标到outer区域
+        clearInterval(ID);
+    },function () {
+        //鼠标离开outer
+        ID = setInterval(go_right, 1000);
+    })
+
+    //悬浮事件
+    $(".num li").mouseover(function () {
+
+        i = $(this).index()
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current");
+    })
+</script>
+</body>
+</html>

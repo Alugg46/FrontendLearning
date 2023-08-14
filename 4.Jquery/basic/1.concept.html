@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+</head>
+
+<ul class="c1">
+    <li>123</li>
+    <li>234</li>
+    <li>556</li>
+</ul>
+
+<script>
+    $(".c1 li").css("color","red");
+    console.log($(".c1 li"))  // JQ对象：类似于dom集合对象
+
+    //索引：将JQ对象转化为dom对象
+    console.log($(".c1 li")[0].innerHTML);
+
+    //如何将Dom对象转换为JQ对象
+    var ele = document.querySelector(".c1 li")
+    console.log(ele);
+    ele.style.color="red";
+    $(ele).css("color","green");  // $(dom对象) 就转化为JQ对象了 可以调用css
+</script>
+<body>
+</body>
+</html>
