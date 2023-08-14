@@ -1,2 +1,2 @@
 # FrontendLearning
-Quick learn HTML CSS JS
+Quick way to revise HTML CSS JS
